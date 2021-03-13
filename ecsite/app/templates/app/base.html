@@ -1,0 +1,42 @@
+{% load static %}
+{% load humanize %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Djamazon</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="{% url 'app:index' %}">Djamazon</a></h1>
+            <div class="header-menu">
+                </a></span>
+                </a></span>
+                </a></span>
+                <!-- if消した -->
+                <span>Point: {{ user.point | intcomma }}</span>
+                <span><a href="{% url 'app:fav_products' %}">お気に入り</a></span> <span><a
+                        href="{% url 'app:cart' %}">カート</a></span>
+                <span><a href="{% url 'app:order_history' %}">注文履歴</a></span>
+                <span><a href="{% url 'app:logout' %}">ログアウト
+                        <!-- else消した -->
+                        <span><a href="{% url 'app:login' %}">ログイン</a></span>
+                        <span><a href="{% url 'app:signup' %}">新規登録</a></span>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        {% for message in messages %}
+        <p class="message-{{ message.tags }}">{{ message }}</p> {% endfor %}
+        {% block content %}{% endblock %}
+    </div>
+</body>
+
+</html>
