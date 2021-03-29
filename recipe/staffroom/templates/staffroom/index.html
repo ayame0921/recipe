@@ -1,0 +1,53 @@
+{% extends 'staffroom.html' %}
+
+{% block body %}
+
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                レシピ一覧
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    {% for recipe in recipe_list %}
+                        <tr>
+                            <th>{{ recipe.title }}</th>
+                            <th>
+                                <a href="{% url 'recipe:detail' recipe.id %}" class="btn btn-primary">詳細</a>
+                                <a href="{% url 'staffroom:recipe:update' recipe.id %}" class="btn btn-secondary">編集</a>
+                            </th>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+
+        <div class="card mt-3">
+            <div class="card-header">
+                コメント
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>レシピ</th>
+                        <th>コメント内容</th>
+                        <th>コメント投稿日</th>
+                    </tr>
+                    </thead>
+                    {% for recipe in recipe_list %}
+                        {% for comment in recipe.comment_set.all %}
+                            <tr>
+                                <td>{{ recipe.title }}</td>
+                                <td>{{ comment.content }}</td>
+                                <td>{{ comment.created }}</td>
+                            </tr>
+                        {% endfor %}
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

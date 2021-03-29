@@ -1,0 +1,28 @@
+[{
+    "model": "recipe.recipe",
+    "pk": 1,
+    "fields": {"title": "タイトルテスト1",
+    "content": "内容テキスト１",
+    "description": "説明テスト１",
+    "image": "",
+    "user": null,
+    "created": "2021-03-28T12:05:44.689Z",
+    "modified": "2021-03-28T14:21:04.010Z"}
+},
+{
+    "model": "recipe.recipe",
+    "pk": 2,
+    "fields": {"title": "タイトルテスト2",
+    "content": "内容テキスト2",
+    "description": "",
+    "image": "",
+    "user": null,
+    "created": "2021-03-28T12:05:56.749Z",
+    "modified": "2021-03-28T12:05:56.749Z"}
+},
+{
+    "model": "recipe.recipe",
+    "pk": 3,
+    "fields": {"title": "タイトルテスト3",
+    "content": "内容テキスト3",
+    "description": "", "image": "", "user": null, "created": "2021-03-28T12:06:10.811Z", "modified": "2021-03-28T12:06:10.811Z"}}, {"model": "recipe.recipe", "pk": 5, "fields": {"title": "タイトルテスト5", "content": "内容テキスト５", "description": "", "image": "", "user": null, "created": "2021-03-28T12:06:39.170Z", "modified": "2021-03-28T12:06:39.170Z"}}, {"model": "recipe.recipe", "pk": 6, "fields": {"title": "タイトルテキスト６", "content": "内容テキスト６", "description": "", "image": "", "user": null, "created": "2021-03-28T12:07:01.826Z", "modified": "2021-03-28T12:07:01.826Z"}}, {"model": "recipe.recipe", "pk": 7, "fields": {"title": "フォームテスト", "content": "フォームテストテキスト", "description": "あああああ", "image": "", "user": 1, "created": "2021-03-28T13:59:48.914Z", "modified": "2021-03-29T02:08:33.248Z"}}, {"model": "recipe.recipe", "pk": 8, "fields": {"title": "テスト内容１", "content": "テストテキスト１", "description": "テスト説明１", "image": "", "user": 1, "created": "2021-03-28T14:16:29.156Z", "modified": "2021-03-29T02:08:27.361Z"}}, {"model": "recipe.recipe", "pk": 9, "fields": {"title": "aaaaa", "content": "ああああああ", "description": "あああああ", "image": "images/uploaded/IMG_3762_2.JPG", "user": 1, "created": "2021-03-28T14:25:29.222Z", "modified": "2021-03-29T02:47:48.617Z"}}]

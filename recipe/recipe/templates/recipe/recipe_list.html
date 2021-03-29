@@ -4,12 +4,10 @@
 
 {% block body %}
 
-    <h1>recipe_list.html</h1>
-
     {% for recipe in recipe_list %}
 
         <div class="media">
-            {% if recipe.image %}
+        {% if recipe.image %}
             {% thumbnail "120x90" recipe.image -- class="align-self-center mr-3" %}
         {% else %}
             <img src="{% static 'images/01.jpg' %}" class="align-self-center mr-3" alt="..." width="120">

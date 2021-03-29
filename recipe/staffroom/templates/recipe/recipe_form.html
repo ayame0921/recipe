@@ -1,0 +1,36 @@
+{% extends "staffroom.html" %}
+{% load crispy_forms_tags %}
+
+{% block breadcrumbs %}
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item">Dashboard</li>
+        <li class="breadcrumb-item">レシピ</li>
+        <li class="breadcrumb-item active">新規作成</li>
+    </ol>
+{% endblock %}
+
+{% block body %}
+
+    <div class="row my-3">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+
+                        <div class="row">
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary">保存</button>
+                                {% if not "create" in request.path %}
+                                    <a href="{% url 'recipe:detail' recipe.id %}" class="btn btn-secondary">キャンセル</a>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
